@@ -7,12 +7,12 @@ class Flamedeck < Formula
   
     # Define URLs and checksums for different architectures
     on_intel do
-        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.0.3-cli/flamedeck-upload-macos-x64"
+        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.0.3-cli/flamedeck-macos-x64"
         sha256 "6816e7143cda4bfc5aa16eeec7459e114e85a4c8f594ae000b8e9f18ea46a745"
     end
   
     on_arm do
-        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.0.3-cli/flamedeck-upload-macos-arm64"
+        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.0.3-cli/flamedeck-macos-arm64"
         sha256 "e5287cccfb001d13d8c88a895262eb39d3c89b94e8fb7bfb4923815e2d5f61ea"
     end
   
@@ -21,12 +21,12 @@ class Flamedeck < Formula
         # we just need to install it. The name `cli-rust` might be the actual filename
         # if that's how it's downloaded, adjust if needed.
         # The `bin.install` command moves the downloaded file into Homebrew's bin directory
-        # and the `=> "flamedeck-upload"` part renames it to the desired command name.
+        # and the `=> "flamedeck-` part renames it to the desired command name.
   
         if Hardware::CPU.intel?
-            bin.install "flamedeck-upload-macos-x64" => "flamedeck"
+            bin.install "flamedeck-macos-x64" => "flamedeck"
         elsif Hardware::CPU.arm?
-            bin.install "flamedeck-upload-macos-arm64" => "flamedeck"
+            bin.install "flamedeck-macos-arm64" => "flamedeck"
         end
     end
   
