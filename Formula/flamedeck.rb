@@ -2,18 +2,18 @@
 class Flamedeck < Formula
     desc "CLI tool for uploading trace files to Flamedeck"
     homepage "https://github.com/flamedeck-org/flamedeck" 
-    version "0.0.3-cli"
+    version "0.2.0-cli"
     #sha256 "" # We'll add architecture-specific sha256 below
   
     # Define URLs and checksums for different architectures
     on_intel do
-        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.0.3-cli/flamedeck-macos-x64"
-        sha256 "6816e7143cda4bfc5aa16eeec7459e114e85a4c8f594ae000b8e9f18ea46a745"
+        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.2.0-cli/flamedeck-macos-x64"
+        sha256 "68257f5d9ad1da4376f1a85ef20a0b4d061367a814aef5971f9f1e6713274397"
     end
   
     on_arm do
-        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.0.3-cli/flamedeck-macos-arm64"
-        sha256 "e5287cccfb001d13d8c88a895262eb39d3c89b94e8fb7bfb4923815e2d5f61ea"
+        url "https://github.com/flamedeck-org/flamedeck/releases/download/v0.2.0-cli/flamedeck-macos-arm64"
+        sha256 "a9f7be63e7715b542bd8ffdb08af767a9beccfbec56b2f5fc57e8c446fc10584"
     end
   
     def install
